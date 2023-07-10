@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cogoport - Book &amp; Manage Shipments &amp; Cargo Online</title>
+    <!--CSS Links-->
+    <link rel="stylesheet" href="cogo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image" sizes="32*32" href="images/fav.png">
+    <style data-href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&amp;family=Ubuntu:wght@400;500;700&amp;display=swap">
+        @font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79P0Y.woff) format('woff')}
+        @font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh4Oo.woff) format('woff')}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgo6ew.woff) format('woff')}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3TtA.woff) format('woff')}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvTtA.woff) format('woff')}
+        @font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0-ExcOPIDUg-g.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0aExcOPIDUg-g.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0yExcOPIDUg-g.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'PT Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizaRExUiTo99u79D0KExcOPIDU.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OOtLR8a8zILig.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+        @font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OqtLR8a8zILig.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0OCtLR8a8zILig.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'PT Sans';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ptsans/v17/jizfRExUiTo99u79B_mh0O6tLR8a8zI.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcg72nU6AF7xm.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKew72nU6AF7xm.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcw72nU6AF7xm.woff2) format('woff2');unicode-range:U+1F00-1FFF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfA72nU6AF7xm.woff2) format('woff2');unicode-range:U+0370-03FF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcQ72nU6AF7xm.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvWyNPYZvg7UI.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jtGyNPYZvg7UI.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvGyNPYZvg7UI.woff2) format('woff2');unicode-range:U+1F00-1FFF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3js2yNPYZvg7UI.woff2) format('woff2');unicode-range:U+0370-03FF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jvmyNPYZvg7UI.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCjC3jsGyNPYZvgw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvWyNPYZvg7UI.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjtGyNPYZvg7UI.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvGyNPYZvg7UI.woff2) format('woff2');unicode-range:U+1F00-1FFF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjs2yNPYZvg7UI.woff2) format('woff2');unicode-range:U+0370-03FF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjvmyNPYZvg7UI.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+        @font-face{font-family:'Ubuntu';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyNPYZvgw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        </style>
+</head>
+<body>
+    <div class="whole_web_page">
+    <!--NOTIFICATION BAR-->
+        <div class="notification">
+            <div class="notification-items">            
+            <img src="images/cogoport_icon.png"/>
+            <strong style="color: aliceblue;">Limited Time Offer: Get 15% off on all Cogo Assured Rates. </strong>
+            <span class="book_today">Book Today!</span>              
+            </div>       
+        </div>
+
+<!--NAVIGATION BAR-->
+
+         <div class="nav-bar" style="position: sticky; top:0px; left:0px"> 
+
+<!--LOGO  CONTAINER-->
+                <div class="ham">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="top-logo">
+                    <a><img src="images/Capture.PNG" width="120" height="42"></img></a>
+                </div>
+
+<!--NAVIGATION ITEMS-->
+
+                <nav class="nav">
+                    <ul class="nav-items">                    
+                        <li class="nav-child">
+                            <a>Products</a>
+                            <a><i class="fa-solid fa-caret-down" style="color: #616365;"> </i></a>
+                        </li>
+                        <li class="nav-child">
+                            <a>Partners</a>
+                            <a><i class="fa-solid fa-caret-down" style="color: #616365;"></i></a>
+                        </li>
+                        <li class="nav-child">
+                            <a>Tools</a>
+                            <a><i class="fa-solid fa-caret-down" style="color: #616365;"></i></a>
+                        </li>
+                        <li class="nav-child"><a>Company</a>
+                            <a><i class="fa-solid fa-caret-down" style="color: #616365;"></i></a></li>
+                        <li class="nav-child"><a>Knowledge Center</a>
+                            <a><i class="fa-solid fa-caret-down" style="color: #616365;"></i></a></li>
+                        <li class="nav-child">Contact Us</li>
+                    </ul>
+                </nav>
+
+<!--REGISTER-->
+
+                <ul class="register">
+                    <li class="smile_symbol" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 27 27" style="margin-right: 5px;"><path fill="#fff" d="M13.368 26.485c6.946 0 12.577-5.63 12.577-12.576 0-6.946-5.631-12.576-12.577-12.576C6.423 1.333.792 6.963.792 13.909c0 6.946 5.631 12.576 12.576 12.576Z"></path>
+                            <path fill="#231F20" d="M13.368.843a13.007 13.007 0 0 1 7.306 2.232 13.1 13.1 0 0 1 4.73 5.748 13.048 13.048 0 0 1-1.2 12.391 13.1 13.1 0 0 1-5.75 4.729 13.048 13.048 0 0 1-12.39-1.2 13.1 13.1 0 0 1-4.734-5.748A13.049 13.049 0 0 1 2.535 6.603 13.1 13.1 0 0 1 8.283 1.87 12.984 12.984 0 0 1 13.368.843Zm0 25.152a12.027 12.027 0 0 0 6.757-2.064 12.122 12.122 0 0 0 4.378-5.318 12.069 12.069 0 0 0-1.112-11.462 12.122 12.122 0 0 0-5.318-4.38A12.07 12.07 0 0 0 6.611 3.886a12.123 12.123 0 0 0-4.38 5.318 12.07 12.07 0 0 0 1.115 11.462 12.122 12.122 0 0 0 5.318 4.377 12.01 12.01 0 0 0 4.704.952Z"></path>
+                            <path fill="#fff" d="M21.738 15.464c-2.374 7.394-12.709 6.916-15.1.964l15.1-.964Z"></path>
+                            <path fill="#231F20" d="M14.02 21.442a9.571 9.571 0 0 1-2.182-.25 9 9 0 0 1-2.34-.901 7.364 7.364 0 0 1-3.315-3.681.49.49 0 1 1 .908-.365 6.4 6.4 0 0 0 2.883 3.192 8.005 8.005 0 0 0 2.086.8 8.6 8.6 0 0 0 2.267.22 7.826 7.826 0 0 0 4.172-1.333 6.963 6.963 0 0 0 1.638-1.577 7.627 7.627 0 0 0 1.134-2.233.488.488 0 1 1 .932.3 8.608 8.608 0 0 1-1.28 2.519 7.918 7.918 0 0 1-1.869 1.8 8.8 8.8 0 0 1-4.69 1.5c-.116.006-.23.009-.345.009ZM18.71 11.148c-.5 0-.889-.57-.889-1.3 0-.73.391-1.3.89-1.3.497 0 .888.57.888 1.3 0 .73-.39 1.3-.889 1.3Z"></path>
+                            <path fill="#231F20" d="M18.71 10.87c.338 0 .612-.457.612-1.02s-.274-1.02-.612-1.02c-.338 0-.612.457-.612 1.02s.274 1.02.612 1.02ZM8.416 11.35c.491 0 .89-.58.89-1.297 0-.716-.399-1.297-.89-1.297-.49 0-.889.58-.889 1.297 0 .716.398 1.297.89 1.297Z"></path>
+                            <path fill="#231F20" d="M7.805 10.053c0 .563.274 1.02.612 1.02.338 0 .612-.457.612-1.02s-.274-1.02-.612-1.02c-.338 0-.612.456-.612 1.02Z"></path>
+                            <path fill="#fff" d="M14.375 8.83c1.32 1.793 1.888 3.245.9 4.476-.988 1.231-3.655.036-3.655.036"></path>
+                            <path fill="#231F20" d="M13.851 14.354a4.813 4.813 0 0 1-.867-.085 7.61 7.61 0 0 1-1.568-.478.489.489 0 1 1 .4-.893c.438.185.894.322 1.36.411 1.058.19 1.516-.063 1.714-.308a1.719 1.719 0 0 0 .324-1.6 6.89 6.89 0 0 0-1.234-2.276.489.489 0 0 1 .788-.58 7.766 7.766 0 0 1 1.4 2.622c.11.415.127.849.051 1.27-.088.434-.281.84-.563 1.181-.326.39-.789.64-1.294.7-.169.025-.34.037-.51.036Z">
+                                
+                            </path>
+                        </svg></li>
+                        <li class="login" style="margin-right: 16px; cursor: pointer;">login</li>
+                        <li class="sign_up" style="cursor: pointer;">Sign Up</li>
+                </ul>
+        </div>
+
+    <div class="body_total"> 
+
+<!--WHOLE DISPLAY CONTAINER TEXT AND VIDEO COMBINATION-->
+
+        <div class="display">  
+
+<!--TEXT AND VIDEO CONTAINER--> 
+
+                <div class="display_style">
+
+<!--TEXT-->
+
+                        <div class="top_text">
+                            <h1>Grow Faster, Go Global.</h1>
+                            <p style="margin-bottom: 20px;">Strengthen your Supply Chain, and Scale your Business<br/>with Reliable Shipping and Cashflows.</p>
+                            <form class="form">
+                            <p style="font-size: 12px;font-weight: 700;line-height: 14px;color: #000">Talk to us now!</p>                           
+                            <div class="Whatsapp_contain" style="display: flex;background-color: #fff;color: #000;width: 387px;height: 41px; border-radius: 20px; align-items: center;justify-content:space-around;">   
+                                <div class="whatsapp_icon" style="display: flex;">
+                                    <img src="images/whatsapp_icon.png" style="width: 20px;height: 20px;" class="image_whats" />
+                                    <div class="icon_num">+91</div>
+                                    <div class="icon_2"><i class="fa-sharp fa-solid fa-caret-down"></i></div>
+                                </div>                               
+                               <input placeholder="Whatsapp number" class="whatsapp_input" type="text" style="align-items: center;"/>
+                               <button class="whatsapp_button">Get Started</button>
+                            </div>    
+                            </form>
+                        </div>
+
+<!--VIDEO-->
+
+                        <video class="video_top" autoplay="1" loop="1" muted>
+                            <source class="source"src="images/new video.mp4">
+                        </video>
+                </div>                          
+        </div>
+
+<!--STATISTICS SECTION -->
+
+        <div class="statistics_section">
+                <div class="numbers">
+                        <div class="numbers_item">
+                            <h2 style="margin-bottom: 5px;">180+</h2>
+                            <h4>Countries Served</h4>
+                        </div>
+                        <div class="numbers_item">
+                            <h2 style="margin-bottom: 5px;">10000</h2>
+                            <h4>Ports Pairs Served</h4>
+                        </div>
+                        <div class="numbers_item">
+                            <h2 style="margin-bottom: 5px;">30000+</h2>
+                            <h4>Tons of Air Cargo Moved</h4>
+                        </div>
+                        <div class="numbers_item">
+                            <h2 style="margin-bottom: 5px;">700000</h2>
+                            <h4>Containers Moved</h4>
+                        </div>
+                </div>
+        </div>
+
+<!--SUPPLY CHAIN IMAGE AND MATTER-->
+
+    <div class="supply_chain">
+                    <div style="margin-top:40px">
+                        <div class="supply_style fixed_container style_1">
+                           <div class="one_stop">
+                                <h2>One Stop Solution for Your Supply Chain</h2><span>Connected Shipping, Finance, and Trade-tech, to Power Global Trade and Supply Chains.</span></div>
+                            <div class="styles_image_container___PdMF">
+                                <img src="images/supply.png" width="500" height="360" class="supply_image" style="color:transparent" /></div>
+                        </div>
+                    </div>
+
+<!--OUR PRODUCTS-->
+
+                    <div class="fixed_container style_1">
+                        <h3 class="our_products">Our Products</h3>
+                        <div class="products_style">
+                            <div class="products_card_container">
+                                <div class="pro_card">
+
+<!--END TO END LOGISTICE-->
+                                    <h4 class="card_text">End to End Cross Border Logistics</h4>
+                                    <div class="sub_card">
+                                        <a class="card_each">
+                                            <div class="each_element">
+                                                <div class="each_element_style">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                    <h4 class="h4_style";>Ocean:FCL</h4>
+                                                    <span class="each_element_text">
+                                                        <span class="find_out">
+                                                            Find Out More
+                                                        </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="card_each">
+                                            <div class="each_element">
+                                                <div class="each_element_style">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                    <h4 class="h4_style";>Ocean:FCL</h4>
+                                                    <span class="each_element_text">
+                                                        <span class="find_out">
+                                                            Find Out More
+                                                        </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                    </div>
+                                </div>
+<!--DOMESTIC -->
+                                <div class="pro_card">
+                                    <h4 class="card_text">Domestic Logistics</h4>
+                                    <div class="sub_card">
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a>
+                                            <div class="each_element">
+                                                <div class="each_element_style">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                    <h4 class="h4_style";>Ocean:FCL</h4>
+                                                    <span class="each_element_text">
+                                                        <span class="find_out">
+                                                            Find Out More
+                                                        </span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+<!--SUPPLY CHAIN SOLUTIONS-->
+                                
+                                <div class="pro_card">
+                                    <h4 class="card_text">Supply Chain Solutions</h4>
+                                    <div class="sub_card">
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                    </div>
+                                </div>
+<!--FINANCIAL SERVICES-->
+                                <div class="pro_card">
+                                    <h4 class="card_text">Financial Services</h4>
+                                    <div class="sub_card">    
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                    </div>
+                                </div>
+                                <div class="pro_card">
+                                    <h4 class="card_text">Trade Management Solutions</h4>
+                                    <div class="sub_card">
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                        <a><div class="each_element">
+                                            <div class="each_element_style">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 14" width="60" height="60" role="img"><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.485 6.675H6.618v3.394h5.867V6.675Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.485 10.153H6.618a.085.085 0 0 1-.084-.084V6.675a.085.085 0 0 1 .084-.085h5.867a.085.085 0 0 1 .084.085v3.394a.084.084 0 0 1-.084.084Zm-5.782-.169H12.4V6.76H6.703v3.225Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.62 9.735a.084.084 0 0 1-.085-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.035 0a.084.084 0 0 1-.084-.085V7.283a.084.084 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.084-.085V7.283a.085.085 0 1 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.085.085 0 0 1-.084-.085V7.283a.085.085 0 0 1 .169 0V9.65a.085.085 0 0 1-.085.085Zm-1.034 0a.084.084 0 0 1-.085-.085V7.283a.085.085 0 0 1 .17 0V9.65a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#FBDC00" d="M12.495 3.252H6.619v3.4h5.876v-3.4Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M12.495 6.737H6.618a.085.085 0 0 1-.084-.085v-3.4a.085.085 0 0 1 .084-.084h5.877a.085.085 0 0 1 .084.085v3.4a.085.085 0 0 1-.084.084Zm-5.792-.17h5.707v-3.23H6.703v3.23Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M11.628 6.317a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .169 0v2.37a.085.085 0 0 1-.085.085Zm-1.036 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.086.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.037 0a.085.085 0 0 1-.084-.084V3.862a.085.085 0 0 1 .17 0v2.37a.085.085 0 0 1-.085.085Zm-1.035 0a.085.085 0 0 1-.085-.084V3.862a.085.085 0 1 1 .17 0v2.37a.085.085 0 0 1-.085.085Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M5.555 6.83V5.263H2.358V6.83"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.63 6.83h-.15V5.338H2.432v1.494h-.15V5.186H5.63v1.645Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="m1.108 7.402 2.89-1.296 2.755 1.296L5.42 10.44H2.73L1.108 7.402Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.47 10.516H2.684l-1.682-3.15 2.995-1.343 2.854 1.342-1.383 3.15Zm-2.694-.151H5.37l1.284-2.926-2.658-1.25-2.785 1.249 1.564 2.927Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.997 4.417H2.92v.845h2.078v-.845Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M5.073 5.337H2.845v-.995h2.229v.995Zm-2.078-.15h1.927v-.694H2.995v.693Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.334 3.662h-.756v.755h.756v-.755Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.41 4.493h-.906v-.907h.906v.907Zm-.756-.15h.605v-.606h-.605v.605Zm.396 1.801H3.9v4.24h.15v-4.24Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M4.942 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M4.942 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M2.919 8.294a.37.37 0 1 0 0-.74.37.37 0 0 0 0 .74Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M2.919 8.369a.445.445 0 1 1 0-.89.445.445 0 0 1 0 .89Zm0-.74a.295.295 0 1 0 0 .59.295.295 0 0 0 0-.59Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#fff" d="M12.968 9.652v1.153H2.165V9.658c.637 0 1.239-1.169 1.814-1.169.63 0 1.23 1.169 1.813 1.169.617 0 1.215-1.169 1.814-1.169S8.804 9.658 9.42 9.658c.584 0 1.184-1.169 1.813-1.169.553 0 1.127 1.074 1.735 1.163Z"></path><path class="ic-a-ocean_fcl_svg__ic_a_ocean_fcl" fill="#000" d="M13.044 10.88H2.09V9.582h.075c.297 0 .604-.297.901-.585.31-.3.603-.583.913-.583.351 0 .678.316.994.622.277.27.564.547.82.547.28 0 .578-.29.867-.57.304-.294.619-.6.947-.6.327 0 .642.305.946.6.289.28.588.57.867.57.256 0 .543-.278.82-.547.316-.306.643-.622.994-.622.311 0 .604.283.913.583.274.265.557.54.832.58l.064.01.001 1.293Zm-10.803-.151h10.652V9.714c-.298-.074-.579-.346-.85-.609-.275-.266-.559-.54-.808-.54-.291 0-.595.294-.89.58-.312.302-.608.588-.924.588-.341 0-.662-.31-.973-.612-.282-.274-.574-.556-.841-.556s-.559.283-.841.556c-.311.301-.632.612-.973.612-.317 0-.612-.286-.924-.589-.295-.285-.599-.58-.889-.58-.25 0-.534.275-.809.541-.296.287-.601.583-.93.623v1Z"></path></svg>
+                                                <h4 class="h4_style";>Ocean:FCL</h4>
+                                                <span class="each_element_text">
+                                                    <span class="find_out">
+                                                        Find Out More
+                                                    </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em" height="1em" role="img" style="margin-right: 5px;"><path class="ic-m-arrow_next_svg__ic_m_arrow_next" d="M7.945 2.517c-.186.086-.361.319-.361.481 0 .144.088.27.438.627a296.139 296.139 0 0 1 2.781 2.871c0 .007-2.029.016-4.509.02l-4.509.006-.09.056c-.252.156-.249.689.004.847l.086.053 4.509.006c2.48.004 4.509.012 4.509.02 0 .011-1.539 1.6-2.792 2.882-.338.346-.427.474-.427.616 0 .23.3.523.536.524a.46.46 0 0 0 .192-.064c.074-.043.742-.713 2.026-2.035 1.054-1.085 1.946-1.991 1.983-2.015.092-.058.197-.278.197-.412 0-.134-.105-.354-.197-.412-.037-.024-.929-.93-1.983-2.015-1.284-1.322-1.952-1.992-2.026-2.035a.36.36 0 0 0-.367-.021" fill-rule="evenodd"></path></svg>
+                                                </span>
+                                            </div>
+                                        </div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--TRUSTED BY-->
+
+                <div class="trust_container">
+                    <h3 style="text-align: center;">Trusted by</h3>
+                    <div class="trust_scroll_style">
+                        <div class="trust_scrolling">
+                        <div class="trust_scroll">
+                                <img src="images/bombay.jpg" alt="Bombay" width="146 px" height="73px">
+                                <img src="images/air asia.gif" alt="Air Asia" width="146 px" height="73px">
+                                <img src="images/voltas.png" alt="Voltas" width="146 px" height="73px">
+                                <img src="images/TVS.jpg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/bhilosa_logo.png" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/asahi.jpeg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/jsw-logo-new.jpeg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/utltratech_logo.png" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/vedanta.png" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/bombay.jpg" alt="Bombay" width="146 px" height="73px">
+                                <img src="images/air asia.gif" alt="Air Asia" width="146 px" height="73px">
+                                <img src="images/voltas.png" alt="Voltas" width="146 px" height="73px">
+                                <img src="images/TVS.jpg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/bhilosa_logo.png" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/asahi.jpeg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/jsw-logo-new.jpeg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/utltratech_logo.png" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/vedanta.png" alt="TVS" width="146 px" height="73px">
+                                <img src="images/TVS.jpg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/bhilosa_logo.png" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/asahi.jpeg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/jsw-logo-new.jpeg" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/utltratech_logo.png" alt="TVS" width="146 px" height="73px"> 
+                                <img src="images/vedanta.png" alt="TVS" width="146 px" height="73px"> 
+                        </div>  
+                        </div>
+                        </div>      
+                </div>
+
+<!--READY TO TAKE YOUR CONTAINER-->
+
+                <div class="ready_to">
+                    <div class="ready_to_container fixed_container style_1">
+                        <div class="ready_text">
+                            <h3>Ready to take your Supply Chain to the Next Level?</h3>
+                        </div>
+                        <a><button class="trusted_button">Get Started <span>
+                            <i class="fa-sharp fa-solid fa-caret-down fa-rotate-270" style="color:white;">
+                            </i>
+                        </span>
+                    </button>
+                </a>
+                    </div>
+                </div>
+
+
+<!--BIG IMAGE-->
+
+    <div class="fixed_container style_1">
+                    <div class="how_it_works">
+                        <h3 class="how_it_work_text">How it Works</h3>
+                        <div class="how_button_container">
+                            <button class="how_it_works_button_1">
+                                <span>For Cargo Owners</span>
+                            </button>
+                            <button class="how_it_works_button_2">
+                                <span>For Logistics Partners</span>
+                            </button>
+                        </div>
+                        <div>
+                            <div class="stages_container">
+                                <!--For Responsive one-->
+                                    <div class="laptop_image">
+                                      <img  src="images/homepagem1.png" alt="Home Image" class="home_page"/>
+                                    </div>    
+
+                                    <div>
+                                        <div class="stages_style stage_1">
+                                           <p class="stages">Stage 1:</p>
+                                           <div class="stage_sub_head">                                           
+                                           <div>Discover</div>
+                                           </div>
+                                           <span>
+                                             <div>•</div>
+                                             <p class="stage_text">Spot and Contract Rates for Logistics</p>
+                                           </span>
+                                           <span>
+                                             <div>•</div>
+                                             <p class="stage_text">Service details, Trade Compliance/ Regulatory Requirements</p>
+                                           </span>
+                                           <span>
+                                             <div>•</div>
+                                             <p class="stage_text">Knowledge and Insights on Trade, Logistics, Finance, Supply Chains<p>
+                                           </span>
+                                        </div>
+
+                                        <div class="style_arrow arrow_1">
+                                            <img src="images/arr1.png" width="150px" height="50px"/>
+                                        </div>
+
+                                        <div class="stages_style stage_2">
+                                            <p class="stages">Stage 2:</p>
+                                            <div class="stage_sub_head">
+                                            <div>Plan &amp; Book</div>
+                                            </div>
+                                            <span>
+                                              <div>•</div>
+                                              <p class="stage_text">Route, Service Schedules, Inventory, and Cashflow planning</p>
+                                            </span>
+                                            <span>
+                                              <div>•</div>
+                                              <p class="stage_text">Book with upfront visibility of service terms and inclusions</p>
+                                            </span>
+                                        </div>
+                                
+                                        <div class="style_arrow arrow_2">
+                                           <img src="images/arr2.png" width="150px" height="50px"/>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="laptop_image_section">
+                                        <img src="images/homepagebig.png" width="560px" height="320px"/>
+                                    </div>
+
+                                    <div>
+                                        <div class="style_arrow arrow_3">
+                                        <img src="images/arr3.png" width="150px" height="50px"/>
+                                        </div>
+
+                                        <div class="stages_style stage_3">
+                                        <p class="stages">Stage 3:</p>
+                                       <div class="stage_sub_head">
+                                          <div>Execute</div>
+                                       </div>
+                                    <span>
+                                        <div>•</div>
+                                        <p class="stage_text">Ocean and Air Cargo Tracking</p>
+                                    </span>
+                                    <span>
+                                        <div>•</div>
+                                        <p class="stage_text">Documentation and Filings, Handled</p>
+                                    </span>
+                                    <span>
+                                        <div>•</div>
+                                        <p class="stage_text">Multi-modal: Smooth coordination and handovers between various service providers and stakeholders</p>
+                                    </span>
+                                       </div>
+                            
+                                    <div class="style_arrow arrow_4">
+                                       <img src="images/arr4.png" width="150px" height="50px"/>
+                                    </div>
+
+                                    <div class="stages_style">
+                                       <p class="stages">Stage 4:</p>
+                                       <div class="stage_sub_head">
+                                       <div>Finance</div>
+                                       </div>
+                                       <span>
+                                        <div>•</div>
+                                        <p class="stage_text">Deferred payment on Logistics with PayLater</p>
+                                    </span>
+                                    <span>
+                                        <div>•</div>
+                                        <p class="stage_text">Trade Finance for your Cargo with Export Factoring</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
+<!--INDUSTRIES SERVED-->
+
+    <div class="served_container">
+        <div class="fixed_container style_1">
+
+            <h3 style="text-align: center;">Industries Served</h3>
+            <div class="served_items">
+
+                <div class="served_list"><img src="images/chemical.png" alt="chemical" />
+                <span class="served_text">Chemicals</span>
+                </div>
+                <div class="served_list"><img src="images/paracetamol.png" alt="paracetamol" />
+                    <span class="served_text">Pharmaceuticals</span>   
+                </div>
+                <div class="served_list"><img src="images/electronics.png" alt="electronics" />
+                    <span class="served_text">Electronics</span>
+                </div>
+                <div class="served_list"><img src="images/whitegoods.png" style="width:84px;margin-left:8px" alt="whitegoods" />
+                    <span class="served_text">White Goods</span>
+                </div>
+                <div class="served_list"><img src="images/textiles.png" style="width:88px;margin-left:6px" alt="textiles" />
+                    <span class="served_text">Textiles</span>
+                </div>
+                <div class="served_list"><img src="images/manufactoring.png" alt="manufactoring" />
+                    <span class="served_text">Manufacturing</span>
+                </div>
+                <div class="served_list"><img src="images/agriculture.png" alt="agriculture" />
+                    <span class="served_text">Agriculture</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--GETTING STARTED-->
+
+    <div class="get_started_container">
+        <div class="get_started_style fixed_container style_1">
+            <div>
+                <h2>Get Started Today</h2>
+                <span>
+                    <div>
+                        <p>Plan, Book and Finance your shipment in one place.</p>Experience how Cogoport’s Global Trade Platform can Turbocharge your Business.
+                    </div>
+                </span>
+                <a class="get_started_button">Get Started</a>
+                </div>
+            <div class="get_started_image_content">
+                <img src="images/trade.png" alt="productCheck" width="280" height="360" class="get_started_image" style="color:transparent"></div>
+        </div>
+    </div>
+
+<!--VIDEO TRANSPARENT-->
+
+    <div class="static_video_container">
+        <div class="thumbnail">
+            <img class="video_image" src="images/videonew.png" alt="vide0">
+            <div class="video_overlay">
+            <img style=" width: 60px;height: 60px;margin-bottom: 8px" alt="Play Button" src="images/play-button-white.png"/>
+            </div>
+        </div>
+
+<!--THUMBNAIL-->
+
+        <div style="background: var(--color-primary)">
+            <div class="grow_fast_container fixed_container style_1">
+                <div class="grow_fast">
+                    <h3 style="margin-bottom: 10px;color: #fff";>Grow Faster with Cogoport</h3>
+                    <p style="color: #fff;">Know more about Cogoport’s Global Trade Platform<sup>TM</sup>
+                    </p>
+                </div>
+                <a style="text-decoration:none">
+                    <button class="know_more_button">
+                    Know More <span><i class="fa-sharp fa-solid fa-caret-down fa-rotate-270" style="color:black;"></i></span></button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!--BLOGS-->
+
+    <div class="fixed_container style_1">
+        <div class="blog_container">
+            <h3 style="text-align: center;">Blogs</h3>
+            <div class="card_container">
+                <div class="blog_card">
+                    <a>
+                        <img class="blog_image" src="images/blog1.png" alt="blog1">
+                        <div class="blog_content">
+                            <h4 class="blog_title">Expert Speak</h4>
+                            <h4 class="sub_title">Cogoport: A Global Trade Platform</h4>
+                            <p class="content_blog">Cogoport leverages technology and caters to enterprises of all sizes. Our solutions improve predictability and enhance human capabilities.</p>
+                            <span>Read More</span><h4>02 July 2023</h4>    
+                        </div>
+                    </a>
+                </div>
+                <div class="blog_card">
+                    <a>
+                        <img class="blog_image" src="images/blog2.png" alt="blog2">
+                        <div class="blog_content">
+                            <h4 class="blog_title">Industry Basics</h4>
+                            <h4 class="sub_title">Understanding Lean Supply Chain Management: Definition and Considerations</h4>
+                            <p class="content_blog">Lean Supply Chain Management represents the extension of Lean Thinking across the entire supply chain. So, what are the benefits and key components? Read on!</p>
+                            <span>Read More</span>
+                            <h4>23 June 2023</h4>    
+                        </div>
+                    </a>
+                </div>
+                <div class="blog_card">
+                    <a>
+                        <img class="blog_image" src="images/blog3.png" alt="blog3">
+                        <div class="blog_content">
+                            <h4 class="blog_title">Industry Basics</h4>
+                            <h4 class="sub_title">Exploring Types of Supply Chain Management Strategies &amp; Logistics</h4>
+                            <p class="content_blog">What are the types of supply chain management? How can we effectively apply them to your business and customer service? Lets find out together!</p>
+                            <span>Read More</span>
+                            <h4>21 June 2023</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="view_all">
+                <a><button class="view_all_button">
+                <span>View All</span></button></a>
+            </div>
+        </div>
+    </div>
+
+  <!--SUBSCRIBE-->
+
+    <div class="subscribe">
+        <div class="subscribe_container">
+            <h3 style="margin:0">Subscribe to our newsletter now!</h3>
+            <span style="font-size: var(--font-size-lg)">Don’t miss out on the latest happenings at Cogoport.</span>
+            <div class="subs_contain">
+                <form class="subs_input">
+                    <input type="email" placeholder="Enter email here" required/>
+                    <button class="subscribe_button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--FOOTER-->  
+
+    <div class="footer_1">
+        <div class="footer_1_column">
+            <span class="list2">Products</span>
+            <div class="column_style">
+                <div class="footer_1_heading">
+                    <span class="list">
+                        <a >Global Trade Platform</a></span>
+                    </div>
+                <div class="footer_heading">
+                    <h4>Cross-border Logistic</h4>
+                    <span class="list">
+                        <a>Ocean: FCL</a>
+                    </span><span class="list">
+                        <a >Ocean: LCL</a></span>
+                    <span class="list">
+                        <a >International Air</a>
+                    </span><span class="list">
+                        <a>Customs, CFS, and Handling</a>
+                    </span>
+                </div>
+                <div class="footer_1_heading">
+                    <h4>Domestic Logistics</h4>
+                    <span class="list">
+                        <a>Surface: FTL, PTL, Rail</a>
+                    </span>
+                    <span class="list">
+                        <a>Trailer &amp; Rail Container Haulage</a>
+                    </span>
+                </div>
+            <div class="footer_1_heading">
+                <h4>Trade Management Solutions</h4>
+                <span class="list">
+                    <a>Freight Rates &amp; Schedules</a>
+                </span><span class="list">
+                    <a>Quick Premium Quotations</a>
+                </span>
+                <span class="list">
+                    <a>Duties &amp; Taxes Calculator</a>
+                </span><span class="list">
+                    <a>Tracking &amp; Visibility</a>
+                </span>
+            </div>
+           <div class="footer_1_heading">
+            <h4>CogoMaps</h4>
+            <span class="list">
+                <a>Shipment Planner</a>
+            </span><span class="list">
+                <a>Trade Info</a>
+            </span>
+            <span class="list">
+                <a>Global Routes</a>
+            </span><span class="list">
+                <a>Live Congestion</a>
+            </span>
+           </div>
+            </div>
+       </div>
+    <div class="footer_1_column">
+        <span class="list2" style="height:38px"></span>
+        <div class="column_style">
+            <div class="footer_1_heading">
+                <h4>Supply Chain Solutions</h4>
+                <span class="list"><a>CogoAssured</a>
+                </span><span class="list"><a>Fulfilment Logistics</a></span>
+                <span class="list">
+                    <a>Door to Door Shipments</a>
+                </span><span class="list">
+                    <a>Cargo Insurance</a>
+                </span></div>
+            <div class="footer_1_heading">
+                <h4>Financial Services</h4>
+                <span class="list">
+                    <a>Pay Later</a>
+                </span>
+                <span class="list">
+                    <a>Export Factoring</a></span>
+                <span class="list"><a>CogoFx</a></span>
+        </div>
+    </div>
+    </div>
+    <div class="footer_1_column">
+        <span class="list2">Partners</span>
+        <div class="column_style">
+            <div class="footer_1_heading">
+                <span class="list"><a>Global Partner Network</a>
+                </span></div>
+            <div class="footer_1_heading">
+                <h4>Our Logistics Providers</h4>
+                <span class="list">
+                    <a>Freight Forwarders</a>
+                </span><span class="list">
+                        <a>Transporters</a>
+                    </span>
+                <span
+                    class="list">
+                    <a>Custom Agents</a>
+                </span>
+            </div>
+            <div class="footer_1_heading">
+                <h4>Partnership Program</h4>
+                <span class="list">
+                    <a>Channel Partners</a>
+                </span>
+                    <span class="list">
+                        <a>Overseas Agents</a>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div class="footer_1_column">
+        <span class="list2">Tools</span>
+        <div class="column_style">
+            <div class="footer_1_heading">
+                <span class="list"><a>Rate Discovery</a>
+                </span>
+                <span class="list">
+                    <a>Freight Rate Trends</a>
+                </span>
+                <span class="list">
+                    <a>Tracking</a>
+                </span><span class="list">
+                    <a >HS Code Finder</a>
+                </span><span class="list">
+                        <a>Personal Trade Assistant</a>
+                    </span></div>
+        </div>
+    </div>
+    <div class="footer_1_column">
+        <span class="list2">Company</span>
+        <div class="column_style">
+            <div class="footer_1_heading">
+                <span class="list"><a >About us</a>
+                </span><span class="list"><a>Careers</a></span>
+                <span class="list"><a>Newsroom</a></span>
+                <span class="list"><a>Leadership</a></span>
+                <span class="list"><a>Login</a></span>
+                <span class="list"><a>Sign Up</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer_1_column"><span class="list2">Knowledge Center</span>
+        <div class="column_style">
+            <div class="footer_1_heading"><span class="list">
+                <a>Blogs</a></span>
+                <span class="list"><a>News &amp; Updates</a></span>
+                <span class="list"><a>Events</a></span>
+                <span class="list"><a>Reports</a></span>
+                <span class="list"><a>Notifications</a></span>
+            </div>
+            <div class="footer_1_heading">
+                <h4>Resources</h4>
+                <span class="list"><a>Port info</a></span>
+                <span class="list"><a>Shipping Terms</a></span>
+                <span class="list"><a>Help Center</a></span>
+                <span class="list"><a>Incoterms</a></span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_style">
+            <div class="footer_name">
+                <a>Hyderabad (IN) to Sand Point</a>
+                <a>Hyderabad (IN) to Oakland</a>
+                <a>Hyderabad (IN) to Charleston , South Carolina</a>
+                <a>Hyderabad (IN) to Long Beach</a>
+                <a>Hyderabad (IN) to New York</a>
+                <a>Hyderabad (IN) to Norfolk , Virginia</a>
+                <a>Hyderabad (IN) to Savannah, Georgia</a>
+                <a>Krishnapatnam  to Long Beach</a>
+                <a>Krishnapatnam to Izmit Korfezi</a>
+                <a>Krishnapatnam to Montreal</a>
+            </div>
+            <div class="footer_name">
+                <a>Krishnapatnam to Dar es Salaam</a>
+                <a>Krishnapatnam to Antwerp</a>
+                <a>Krishnapatnam to Seattle</a>
+                <a>Guangzhou (CN)<!-- --> <!-- -->to<!-- --> <!-- -->Krishnapatnam</a>
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Rijeka</a>
+                <a>Krishnapatnam<!-- -->to<!-- -->Bandar Abbas</a>
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Los Angeles</a>
+                <a>Krishnapatnam<!-- -->to<!-- --> <!-- -->Hamm</a>
+                <a>Da Nang<!-- -->to<!-- -->Krishnapatnam</a>
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Shuwaikh</a>
+            </div>
+            <div class="footer_name">
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Istanbul</a>
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Cat Lai</a>
+                <a>Krishnapatnam<!-- -->to<!-- -->New York</a>
+                <a>Valencia<!-- --> <!-- -->to<!-- --> <!-- -->Krishnapatnam</a>
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Ambarli</a>
+                <a>Krishnapatnam<!-- -->to<!-- -->Dakar</a>
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Tamatave (Toamasina)</a>
+                <a>Krishnapatnam<!-- --> <!-- -->to<!-- --> <!-- -->Tacoma</a>
+                <a>Krishnapatnam<!-- -->to<!-- -->Piraeus</a>
+                <a>Qui Nhon<!-- --> <!-- -->to<!-- --> <!-- -->Krishnapatnam</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_bottom">
+        <div class="footer_bottom_style">
+            <span class="copy_right">©<!-- -->2023<!-- --> <!-- -->Cogo Universe PTE. All rights reserved.</span>
+            <ul class="terms_class">
+                <li class="terms"><a>Terms and Conditions |</a></li>
+                <li class="terms"><a>Cookie policy |</a></li>
+                <li class="terms"><a>Privacy and Data Protection Policy</a></li>
+            </ul>
+        </div>
+
+<!--FOOTER ENGLISH-->
+
+        <div class="footer_english">
+            <div>
+            <div class="english">English (IN)</div>
+            </div>
+        </div>
+
+<!--SOCIAL MEDIA ICONS-->        
+       <div class="social_media_icons">
+                <a><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="16" height="16" role="img"><path class="ic-m-linkedin_logo_svg__ic_m_linkedin_logo" d="M2.158 1.038c-.506.112-.92.494-1.089 1.004a1.672 1.672 0 0 0-.002.863c.147.466.501.818.986.983.098.033.198.043.42.043.353.001.544-.052.802-.221a1.45 1.45 0 0 0 .668-1.23c0-.262-.032-.401-.155-.657a1.467 1.467 0 0 0-1.63-.785m7.455 3.755c-.75.134-1.418.542-1.818 1.113l-.118.168V4.993l-1.184.006-1.185.006-.006 3.996-.005 3.996h2.38v-2.234c0-2.379.003-2.467.114-2.789.164-.475.491-.796.937-.917.07-.019.232-.041.36-.048.711-.041 1.167.306 1.369 1.041l.054.198.007 2.375.007 2.374h2.472l-.001-2.608c0-1.617-.009-2.713-.024-2.885-.13-1.476-.878-2.402-2.163-2.675-.294-.062-.94-.082-1.196-.036M1.237 8.995v4.002H3.71V4.993H1.237v4.002" fill-rule="evenodd"></path></svg></a>
+                <a> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="16" height="16" role="img"><path class="ic-m-facebook_logo_svg__ic_m_facebook_logo" d="M7.303 1.03c-.914.095-1.571.513-1.851 1.177-.166.396-.202.72-.202 1.84v.876H3.99v2.054h1.26v6.02h2.427V6.953h1.678l.012-.075c.007-.042.044-.454.083-.916.039-.462.078-.885.085-.94l.014-.099H7.674l.007-.74c.007-.724.009-.744.062-.853a.337.337 0 0 1 .152-.163c.093-.05.123-.052.873-.06l.775-.007V1.003l-1.02.003c-.562.002-1.111.013-1.22.024" fill-rule="evenodd"></path></svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="16" height="16" role="img"><path class="ic-m-instagram_logo_svg__ic_m_instagram_logo" d="M4.62 1.019c-.701.029-1.393.178-1.82.392-1.061.531-1.653 1.504-1.774 2.917-.018.208-.023 1.107-.017 2.859.01 2.757.004 2.626.137 3.236.098.452.241.787.495 1.159.46.672 1.164 1.109 2.09 1.297.508.103.551.105 3.234.105 2.744.001 2.716.002 3.371-.118 1.471-.269 2.483-1.459 2.615-3.078.012-.141.028-1.291.037-2.555.016-2.417.009-2.688-.086-3.336-.059-.402-.099-.563-.212-.855-.369-.955-1.2-1.647-2.272-1.894-.575-.133-.498-.13-3.161-.133-1.354-.002-2.541 0-2.637.004M9.17 2.1c1.069.057 1.516.187 1.966.568.27.23.547.668.635 1.007.046.175.097.611.128 1.096.03.453.03 2.896.001 4.084-.025 1.039-.067 1.339-.248 1.769a2.029 2.029 0 0 1-1.385 1.156c-.483.117-.615.126-1.949.136-1.703.013-4.024-.026-4.258-.071-.671-.13-1.011-.297-1.359-.665-.367-.389-.528-.845-.6-1.695-.032-.376-.032-4.626 0-4.982.031-.343.104-.759.165-.942a2.13 2.13 0 0 1 .645-.938c.178-.147.552-.339.771-.394.178-.045.684-.1 1.171-.126.507-.027 3.823-.03 4.317-.003m.79 1.014a.737.737 0 0 0-.443.457.949.949 0 0 0 .048.54.776.776 0 0 0 .328.326c.088.045.141.055.315.055.19 0 .223-.007.335-.07a.721.721 0 0 0-.083-1.305.975.975 0 0 0-.5-.003m-3.494.844c-.243.04-.619.164-.846.279-.742.374-1.284 1-1.549 1.791a2.805 2.805 0 0 0-.151.958c0 .686.188 1.276.578 1.817a3.083 3.083 0 0 0 3.377 1.148 3.155 3.155 0 0 0 1.589-1.106c.184-.245.408-.688.488-.97a3.087 3.087 0 0 0-2.448-3.919 4.053 4.053 0 0 0-1.038.002m.888 1.069a2.005 2.005 0 0 1 1.597 1.546c.059.255.053.657-.013.905a1.997 1.997 0 0 1-.595.987c-.162.153-.25.215-.44.308-.346.171-.543.218-.915.217a1.727 1.727 0 0 1-.886-.205c-.4-.2-.705-.508-.9-.91a1.678 1.678 0 0 1-.201-.782 1.856 1.856 0 0 1 .135-.839 2.04 2.04 0 0 1 1.533-1.237c.181-.03.503-.026.685.01" fill-rule="evenodd"></path></svg></a>
+            </div>
+    </div>
+    
+
+
+<!--RESPONSIVE FOOTER-->
+
+    <div class="resp_footer_1">
+        <div class="resp_footer_1_item">
+            <button class="resp_footer_1_item_button" style="background:#FBDC00">
+                <h3 class="resp_footer_1_item_title">Products</h3>
+            </button>
+        </div>
+
+
+        <div class="resp_footer_1_item">
+            <button class="resp_footer_1_item_button" style="background:#FBDC00">
+                <h3 class="resp_footer_1_item_title">Partners</h3>
+            </button>
+        </div>
+
+        <div class="resp_footer_1_item">
+            <button class="resp_footer_1_item_button" style="background:#FBDC00">
+                <h3 class="resp_footer_1_item_title">Tools</h3>
+            </button>    
+        </div>
+
+        <div class="resp_footer_1_item">
+            <button class="resp_footer_1_item_button" style="background:#FBDC00">
+                <h3 class="resp_footer_1_item_title">Company</h3>
+            </button>
+        </div>
+
+
+        <div class="resp_footer_1_item">
+            <button class="resp_footer_1_item_button" style="background:#FBDC00">
+                <h3 class="resp_footer_1_item_title">Knowledge Center</h3>
+            </button>
+        </div>
+        <div class="resp_footer_1_item">
+            <button class="resp_footer_1_item_button" style="background:#FBDC00">
+                <h3 class="resp_footer_1_item_title">Contact Us</h3>
+            </button>       
+        </div>
+        <div class="resp_footer_1_lang_container">
+            <div style="padding-top: 4px;">
+                <div class="english">English (IN)</div>
+            </div>
+           
+        <span>©<!-- --> <!-- -->2023<!-- --> <!-- -->Cogo Universe PTE. All rights reserved.
+        </span>       
+        </div>
+    </div> 
+    
+          
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
